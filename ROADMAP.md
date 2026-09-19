@@ -41,6 +41,11 @@ C_ij(tau), S_ij(omega), Gamma_Q(t).
 
 Fit or derive candidate maps `F_a` only on training/calibration runs; evaluate them on held-out runs.
 
+- [x] Retype NASER oscillator drive, phase slope, curvature and phase-imprint proxy into measurable variables.
+- [x] Add deterministic oscillator-coherence feature extraction.
+- [x] Quarantine glyph/symbolic variables from the physical core.
+- [ ] Derive or fit a candidate `F_a` map without target leakage.
+
 ## P3 — Physical coupling test HνQ
 
 Minimum design:

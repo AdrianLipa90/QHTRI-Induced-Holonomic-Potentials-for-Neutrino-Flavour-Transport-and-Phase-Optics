@@ -12,6 +12,7 @@ This file is normative for claim status in this repository.
 | C5 | The working Euler-Berry closure relation `Gamma/(2pi) = D + epsilon + m + residual` is a useful internal constraint. | DERIVED_IN_MODEL | Internal consistency and independent derivation. |
 | C6 | Piecewise-constant propagation preserves path ordering and reduces to constant-H evolution for one segment. | IMPLEMENTED / DERIVED | Unit tests + matrix-exponential construction. |
 | C7 | The frozen M0/M1/M2 computational discriminator rejects a scalar identity potential as a source of flavour-selective probability changes. | IMPLEMENTED / SIMULATED | Deterministic regression tests. |
+| C8 | NASER oscillator/phase quantities can be retyped into explicit calibrated drive, phase-gradient, curvature and coherence features without importing symbolic variables. | IMPLEMENTED / PROVENANCE | Source-anchored bridge note + regression tests. |
 | HνQ | Physical QHTRI oscillator geometry couples measurably to neutrino phase/flavour transport. | PHYSICAL_HYPOTHESIS | Blinded controlled experiment; independent replication. |
 | Hfocus | HνQ is strong and controllable enough to produce useful flavour-selective focusing. | PHYSICAL_HYPOTHESIS | Spatially resolved reciprocity/focusing experiment. |
 | Hg | QHTRI modifies physical spacetime metric `g_mu_nu`, not only an effective flavour-space Hamiltonian. | STRONG_PHYSICAL_HYPOTHESIS | Independent metric-sensitive measurement excluding effective-medium explanations. |

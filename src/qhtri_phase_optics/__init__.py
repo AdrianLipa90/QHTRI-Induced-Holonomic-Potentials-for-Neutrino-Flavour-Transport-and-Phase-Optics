@@ -22,6 +22,13 @@ from .flavour import (
 )
 
 from .discrimination import DiscriminationResult, run_three_model_discrimination
+from .bridge import (
+    OscillatorFeatures,
+    legacy_phase_imprint_proxy,
+    oscillating_drive,
+    oscillator_features,
+    phase_slope_curvature,
+)
 
 __all__ = [
     "berry_holonomy",
@@ -38,4 +45,9 @@ __all__ = [
     "evolve_piecewise",
     "DiscriminationResult",
     "run_three_model_discrimination",
+    "OscillatorFeatures",
+    "legacy_phase_imprint_proxy",
+    "oscillating_drive",
+    "oscillator_features",
+    "phase_slope_curvature",
 ]
