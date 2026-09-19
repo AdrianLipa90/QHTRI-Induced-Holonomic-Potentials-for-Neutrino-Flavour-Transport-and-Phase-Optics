@@ -8,8 +8,9 @@
 - [x] Implement Hermitian SU(3) flavour potentials.
 - [x] Implement unitary evolution under a constant Hermitian Hamiltonian.
 - [x] Implement quadratic phase-lens target.
-- [ ] Add position-dependent path-ordered propagation.
-- [ ] Add standard PMNS parameterisation and independently verified numerical fixtures.
+- [x] Add position-dependent path-ordered propagation (piecewise-constant reference implementation).
+- [x] Add standard PMNS parameterisation.
+- [ ] Add independently verified numerical fixtures using frozen external oscillation parameters.
 
 ## P1 — Computational discrimination
 

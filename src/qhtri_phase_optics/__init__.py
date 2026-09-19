@@ -16,6 +16,9 @@ from .flavour import (
     flavour_probabilities,
     matter_potential,
     vacuum_hamiltonian,
+    pmns_matrix,
+    compose_hamiltonian,
+    evolve_piecewise,
 )
 
 __all__ = [
@@ -28,4 +31,7 @@ __all__ = [
     "flavour_probabilities",
     "matter_potential",
     "vacuum_hamiltonian",
+    "pmns_matrix",
+    "compose_hamiltonian",
+    "evolve_piecewise",
 ]

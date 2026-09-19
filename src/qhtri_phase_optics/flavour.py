@@ -91,3 +91,81 @@ def flavour_probabilities(state: np.ndarray) -> np.ndarray:
     if total == 0.0:
         raise ValueError("state must be non-zero")
     return p / total
+
+
+def pmns_matrix(
+    theta12: float,
+    theta13: float,
+    theta23: float,
+    delta_cp: float = 0.0,
+) -> np.ndarray:
+    """Return the standard three-flavour PMNS matrix without Majorana phases.
+
+    Angles and ``delta_cp`` are in radians. Majorana phases are omitted because
+    they do not affect ordinary flavour-oscillation probabilities.
+    """
+    vals = np.asarray([theta12, theta13, theta23, delta_cp], dtype=float)
+    if not np.all(np.isfinite(vals)):
+        raise ValueError("PMNS parameters must be finite")
+
+    s12, s13, s23 = np.sin([theta12, theta13, theta23])
+    c12, c13, c23 = np.cos([theta12, theta13, theta23])
+    ep = np.exp(1j * float(delta_cp))
+    em = np.conj(ep)
+
+    return np.array(
+        [
+            [c12 * c13, s12 * c13, s13 * em],
+            [
+                -s12 * c23 - c12 * s23 * s13 * ep,
+                c12 * c23 - s12 * s23 * s13 * ep,
+                s23 * c13,
+            ],
+            [
+                s12 * s23 - c12 * c23 * s13 * ep,
+                -c12 * s23 - s12 * c23 * s13 * ep,
+                c23 * c13,
+            ],
+        ],
+        dtype=complex,
+    )
+
+
+def compose_hamiltonian(*terms: np.ndarray) -> np.ndarray:
+    """Sum finite Hermitian 3x3 Hamiltonian terms and fail closed otherwise."""
+    if not terms:
+        raise ValueError("at least one Hamiltonian term is required")
+    total = np.zeros((3, 3), dtype=complex)
+    for term in terms:
+        term = np.asarray(term, dtype=complex)
+        if term.shape != (3, 3) or not np.all(np.isfinite(term)):
+            raise ValueError("each Hamiltonian term must be a finite 3x3 matrix")
+        if not np.allclose(term, term.conj().T, atol=1e-12):
+            raise ValueError("each Hamiltonian term must be Hermitian")
+        total = total + term
+    return total
+
+
+def evolve_piecewise(
+    hamiltonians: np.ndarray,
+    state: np.ndarray,
+    distances: np.ndarray,
+) -> np.ndarray:
+    """Path-ordered evolution through piecewise-constant Hamiltonian segments.
+
+    The first Hamiltonian acts first. This is the minimal numerical surface for
+    non-commuting spatial potentials; no physical QHTRI coupling is assumed.
+    """
+    hamiltonians = np.asarray(hamiltonians, dtype=complex)
+    distances = np.asarray(distances, dtype=float)
+    if hamiltonians.ndim != 3 or hamiltonians.shape[1:] != (3, 3):
+        raise ValueError("hamiltonians must have shape (N, 3, 3)")
+    if distances.shape != (hamiltonians.shape[0],):
+        raise ValueError("distances must contain one value per Hamiltonian")
+    if not np.all(np.isfinite(distances)) or np.any(distances < 0.0):
+        raise ValueError("distances must be finite and non-negative")
+
+    out = np.asarray(state, dtype=complex)
+    for H, distance in zip(hamiltonians, distances):
+        out = evolve_constant_hamiltonian(H, out, float(distance))
+    return out
