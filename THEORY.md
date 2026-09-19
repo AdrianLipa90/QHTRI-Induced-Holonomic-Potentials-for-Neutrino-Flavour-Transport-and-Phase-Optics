@@ -154,6 +154,54 @@ which is the standard mass-sector phase-rate scale. In this repository it is a c
 
 See `docs/T36_TO_U3_PULLBACK.md`.
 
+### 5.1 Oriented-edge operator route
+
+A second route avoids assigning flavour semantics to individual T36 coordinates.
+
+Let three provenance-bearing complex relation couplings be assigned to the oriented flavour edges
+
+```text
+J_e_mu, J_mu_tau, J_tau_e.
+```
+
+Then define
+
+```text
+H_QF =
+[ d_e          J_e_mu         conj(J_tau_e) ]
+[ conj(J_e_mu) d_mu           J_mu_tau       ]
+[ J_tau_e      conj(J_mu_tau) d_tau          ].
+```
+
+Hermiticity is automatic for real diagonal entries.  Under a local flavour
+rephasing `H -> D^dagger H D`, the closed three-edge phase
+
+```text
+Gamma_3 = arg(H_e_mu H_mu_tau H_tau_e)
+```
+
+is invariant.
+
+Existing GREMLIN model lineage already constructs an oriented complex exchange
+coupling from a bound connection-path holonomy and then inserts one such
+coupling on a selected neutrino flavour edge.  The physical attribution of a
+QHTRI relation to a particular flavour edge remains OPEN.
+
+When both the 36D pullback route and the oriented-edge route have independent
+provenance-bearing physical bindings, compare their traceless operators:
+
+```text
+Delta_route =
+  || traceless(Pi_W(H_Q)) - traceless(H_QF) ||.
+```
+
+This is a falsification gate, not a fitting objective.
+
+The historical v11 operator-tetrahedron edge set is not used as Euclidean
+geometry in this route.  Its published six distances contain an exact triangle
+inequality violation of `1/441` and reconstruct a Gram matrix with negative
+determinant.  See `docs/GREMLIN_SOURCE_BINDING_AUDIT.md`.
+
 ## 6. Phase optics
 
 For an effective propagation eigenmode `a`, a thin-lens phase target is

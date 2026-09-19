@@ -37,6 +37,18 @@ from .pullback import (
     project_operator_to_flavour,
     validate_flavour_embedding,
 )
+from .edge_operator import (
+    assemble_oriented_flavour_exchange,
+    flavour_cycle_phase,
+    rephase_flavour_operator,
+    route_mismatch,
+    traceless_part,
+)
+from .legacy_geometry import (
+    historical_euclidean_geometry_passes,
+    historical_gram_determinant,
+    historical_triangle_defect,
+)
 
 __all__ = [
     "berry_holonomy",
@@ -64,4 +76,12 @@ __all__ = [
     "pi_36_to_u3",
     "project_operator_to_flavour",
     "validate_flavour_embedding",
+    "assemble_oriented_flavour_exchange",
+    "flavour_cycle_phase",
+    "rephase_flavour_operator",
+    "route_mismatch",
+    "traceless_part",
+    "historical_euclidean_geometry_passes",
+    "historical_gram_determinant",
+    "historical_triangle_defect",
 ]

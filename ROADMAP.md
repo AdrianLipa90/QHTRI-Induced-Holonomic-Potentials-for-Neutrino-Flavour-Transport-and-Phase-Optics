@@ -46,6 +46,10 @@ The SU(3) coefficient functional `F_a` is algebraically fixed after a typed `Pi_
 - [x] Quarantine glyph/symbolic variables from the physical core.
 - [x] Implement canonical `u(3)` / SU(3) coefficient extraction after an explicit 36D->flavour pullback.
 - [x] Implement isometric `W: C^3 -> C^36` reference pullback with Hermiticity and basis-covariance gates.
+- [x] Add a second operator route: provenance-bearing oriented QHTRI relation couplings -> Hermitian flavour-edge assembly.
+- [x] Add pullback-vs-edge traceless operator mismatch as a future cross-route falsification gate.
+- [x] Quarantine the historical v11 operator tetrahedron from ordinary Euclidean use after exact triangle/Gram failure.
+- [ ] Bind QHTRI relation/loop identities to physical flavour edges without target leakage.
 - [ ] Derive or calibrate the physical/provenance `Pi_{36->nu}` (or `W`) without target leakage.
 
 ## P3 — Physical coupling test HνQ
