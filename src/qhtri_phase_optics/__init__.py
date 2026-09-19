@@ -21,6 +21,8 @@ from .flavour import (
     evolve_piecewise,
 )
 
+from .discrimination import DiscriminationResult, run_three_model_discrimination
+
 __all__ = [
     "berry_holonomy",
     "closure_residual",
@@ -34,4 +36,6 @@ __all__ = [
     "pmns_matrix",
     "compose_hamiltonian",
     "evolve_piecewise",
+    "DiscriminationResult",
+    "run_three_model_discrimination",
 ]
