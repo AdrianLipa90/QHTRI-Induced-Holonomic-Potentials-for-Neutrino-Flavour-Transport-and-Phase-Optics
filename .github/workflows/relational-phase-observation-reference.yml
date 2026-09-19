@@ -1,0 +1,23 @@
+name: Relational phase observation reference
+
+on:
+  pull_request:
+    paths:
+      - 'docs/ORBIT_EPICYCLE_PHASE_CURVATURE_BRIDGE_V0_1.md'
+      - 'src/qhtri_phase_optics/orbit_curvature.py'
+      - 'tests/test_orbit_curvature.py'
+      - '.github/workflows/relational-phase-observation-reference.yml'
+  workflow_dispatch:
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install reference package
+        run: python -m pip install -e '.[test]'
+      - name: Run complete repository tests
+        run: python -m pytest -q
