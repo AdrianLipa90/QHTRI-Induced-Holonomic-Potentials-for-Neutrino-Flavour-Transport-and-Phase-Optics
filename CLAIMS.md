@@ -6,7 +6,7 @@ This file is normative for claim status in this repository.
 |---|---|---|---|
 | C0 | Standard three-flavour propagation can be represented by a Hermitian Hamiltonian. | STANDARD | Established baseline. |
 | C1 | A Hermitian matrix-valued perturbation can be decomposed as `v0 I + sum xi_a lambda_a`. | STANDARD / MATHEMATICAL | Algebraic identity. |
-| C2 | A common scalar potential proportional to identity changes global phase but not flavour probabilities. | STANDARD / DERIVED | Unit test + analytic proof. |
+| C2 | A common scalar potential proportional to identity does not change internal flavour probabilities; if it varies spatially it may still change the common spatial wavefront. | STANDARD / DERIVED | Unit test + analytic proof; keep spatial optics distinct from flavour conversion. |
 | C3 | Closed-loop discrete Berry holonomy is invariant under independent global rephasing of sampled states. | STANDARD / DERIVED | Unit test + analytic proof. |
 | C4 | The repository can generate programmable quadratic phase profiles and their target curvature. | IMPLEMENTED / SIMULATED | Unit tests. |
 | C5 | The working Euler-Berry closure relation `Gamma/(2pi) = D + epsilon + m + residual` is a useful internal constraint. | DERIVED_IN_MODEL | Internal consistency and independent derivation. |
@@ -16,6 +16,9 @@ This file is normative for claim status in this repository.
 | C9 | Given a typed Hermitian pullback `Pi_{36->nu}`, the flavour coefficients are uniquely `v0=Tr(Pi)/3` and `xi_a=Tr(lambda_a Pi)/2`; an isometric projection `W^dagger H_Q W` preserves Hermiticity and is flavour-basis covariant. | DERIVED / IMPLEMENTED | Analytic derivation + reconstruction/covariance tests. |
 | C10 | Three oriented complex pair couplings `J_e_mu,J_mu_tau,J_tau_e` define a Hermitian three-flavour exchange operator; `arg(H_e_mu H_mu_tau H_tau_e)` is invariant under local flavour rephasing. | DERIVED / IMPLEMENTED | Hermiticity + rephasing regression tests. |
 | C11 | The historical v11 six-edge operator-tetrahedron set fails an ordinary Euclidean interpretation: one face violates the triangle inequality by exactly `1/441` and its reconstructed Gram determinant is negative. | LEGACY_GEOMETRY_FAIL / PROVENANCE | Exact rational regression tests; do not assign physical meaning to the defect. |
+| C12 | For the admitted RF-L3 information potential `U_I=(alpha_I/kappa_E) Xi_I`, any admitted relational-state update changes the potential by exactly `Delta U_I=(alpha_I/kappa_E) Delta Xi_I`. | DERIVED / IMPLEMENTED | Parent RF-L3 definition + exact update regression tests. |
+| C13 | If two realizations instantiate the same typed tuple `(p,pi,A_rel,alpha_I,kappa_E)`, they reconstruct the same `U_I`; the functional itself does not depend on a substrate label. | DERIVED_MODEL_INVARIANCE | Deterministic replay across implementations; does not identify unrelated physical carrier couplings. |
+| C14 | After a route-specific phase coupling is declared, gradients and Hessians of `Xi_I` map linearly to phase steering and focusing; uniform `Delta Xi_I` gives only a common phase shift. | DERIVED / IMPLEMENTED | Phase-screen regression tests + spatial simulation. |
 | HνQ | Physical QHTRI oscillator geometry couples measurably to neutrino phase/flavour transport. | PHYSICAL_HYPOTHESIS | Blinded controlled experiment; independent replication. |
 | Hfocus | HνQ is strong and controllable enough to produce useful flavour-selective focusing. | PHYSICAL_HYPOTHESIS | Spatially resolved reciprocity/focusing experiment. |
 | Hg | QHTRI modifies physical spacetime metric `g_mu_nu`, not only an effective flavour-space Hamiltonian. | STRONG_PHYSICAL_HYPOTHESIS | Independent metric-sensitive measurement excluding effective-medium explanations. |

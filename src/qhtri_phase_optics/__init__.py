@@ -49,6 +49,14 @@ from .legacy_geometry import (
     historical_gram_determinant,
     historical_triangle_defect,
 )
+from .informational_optics import (
+    information_curvature,
+    information_scalar_potential,
+    observation_potential_shift,
+    phase_screen_from_information_curvature,
+    phase_screen_from_potential,
+    relative_information_nat,
+)
 
 __all__ = [
     "berry_holonomy",
@@ -84,4 +92,10 @@ __all__ = [
     "historical_euclidean_geometry_passes",
     "historical_gram_determinant",
     "historical_triangle_defect",
+    "information_curvature",
+    "information_scalar_potential",
+    "observation_potential_shift",
+    "phase_screen_from_information_curvature",
+    "phase_screen_from_potential",
+    "relative_information_nat",
 ]

@@ -52,29 +52,42 @@ The SU(3) coefficient functional `F_a` is algebraically fixed after a typed `Pi_
 - [ ] Bind QHTRI relation/loop identities to physical flavour edges without target leakage.
 - [ ] Derive or calibrate the physical/provenance `Pi_{36->nu}` (or `W`) without target leakage.
 
-## P3 — Physical coupling test HνQ
+## P3 — Informational phase optics
 
-Minimum design:
+This layer treats the RF-L3 information potential as the primary model object, independently of a particular carrier substrate.
 
-- neutrino source/flux condition defined independently of QHTRI acquisition;
-- blinded QHTRI coherent vs phase-randomised states;
-- matched total oscillator power, spectrum, temperature, timing and electromagnetic envelope where feasible;
-- independent sensors for EM pickup, temperature, vibration and clock leakage;
-- pre-registered statistic and sign prediction;
-- shuffled-label and permutation nulls;
-- external replication target.
+- [x] Implement natural-log relative information `D_KL(p||pi)`.
+- [x] Implement `Xi_I = D_KL/A_rel`.
+- [x] Implement `U_I = (alpha_I/kappa_E) Xi_I`.
+- [x] Implement the exact observation/update law `Delta U_I=(alpha_I/kappa_E) Delta Xi_I`.
+- [x] Implement a typed potential-to-phase screen with an explicit route-specific phase measure.
+- [x] Verify that a quadratic informational potential produces constant phase curvature.
+- [ ] Replay identical relational states across two independent numerical implementations and require identical `U_I` / `Delta U_I`.
+- [ ] Add 2D spatial `Xi_I(x,y)` steering/focusing maps and caustic/aberration diagnostics.
 
-Promotion criterion is not merely `p < 0.05`; report effect size, confidence/credible interval, null sensitivity and likelihood/Bayes-factor assumptions.
+Simulation is sufficient to establish these consequences of the admitted informational-potential functional. A separate carrier-binding theorem is required only when identifying the potential with a specific physical neutrino/QHTRI interaction.
 
-## P4 — Reciprocity and phase optics
+## P4 — Physical carrier binding HνQ
 
-Only after P3 survives controls:
+Minimum design for the stronger carrier-specific claim:
 
-1. program two or more spatial QHTRI holonomy profiles;
-2. predict the sign and magnitude ordering of the neutrino-output change before unblinding;
-3. test steering (`grad Phi`) separately from focusing (`Hessian Phi`);
-4. test flavour dependence separately from total-rate effects.
+- bind the QHTRI relation/holonomy source to a neutrino flavour edge or full `Pi_{36->nu}` without target leakage;
+- preserve Hermiticity, gauge/rephasing invariance and zero-coupling limits;
+- compare the pullback and oriented-edge routes when both are independently bound;
+- use blinded coherent vs phase-randomised controls for any hardware-specific attribution;
+- retain independent sensors/nulls for EM pickup, thermal drift, vibration, timing leakage and shared-clock effects.
 
-## P5 — Metric hypothesis Hg
+The physical-carrier question is separate from the already executable informational-potential dynamics.
 
-Do not infer physical spacetime curvature from flavour transport alone. Hg requires an independent observable sensitive to metric geometry and a model that excludes ordinary effective-medium or field-theoretic explanations.
+## P5 — Carrier-specific phase optics
+
+After a carrier map is supplied:
+
+1. feed spatial `Xi_I` / `U_I` profiles through the carrier adapter;
+2. predict steering from `grad Phi` and focusing from `Hessian Phi`;
+3. separate common spatial focusing from flavour-selective focusing;
+4. compare pullback-route and edge-route predictions without fitting them to each other.
+
+## P6 — Metric hypothesis Hg
+
+Do not infer physical spacetime curvature from phase transport alone. Hg requires an independent metric-sensitive binding and a model that excludes ordinary effective-medium or field-theoretic explanations.

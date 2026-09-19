@@ -202,28 +202,78 @@ geometry in this route.  Its published six distances contain an exact triangle
 inequality violation of `1/441` and reconstruct a Gram matrix with negative
 determinant.  See `docs/GREMLIN_SOURCE_BINDING_AUDIT.md`.
 
-## 6. Phase optics
+## 6. Informational phase optics
 
-For an effective propagation eigenmode `a`, a thin-lens phase target is
+RFC RF-L3 supplies the information-scalar potential
 
 ```text
-Phi_a(r) = Phi_a0 - k_a r^2/(2 f_a).
+Xi_I = D_KL(p || pi) / A_rel,
+U_I = (alpha_I / kappa_E) Xi_I.
 ```
 
-Its transverse curvature is
+Therefore an admitted relational-state update `p -> p_y` changes the potential exactly by
 
 ```text
+Delta U_I
+  = (alpha_I / kappa_E) Delta Xi_I.
+```
+
+For fixed relational area,
+
+```text
+Delta U_I
+  = alpha_I / (kappa_E A_rel)
+    * [D_KL(p_y || pi) - D_KL(p || pi)].
+```
+
+No substrate label occurs in this functional. Two realizations with the same typed tuple
+`(p, pi, A_rel, alpha_I, kappa_E)` reconstruct the same informational potential.
+
+This does not mean that every update changes the potential: an update must change `Xi_I`.
+It also does not identify an otherwise-unbound physical carrier interaction.
+
+A phase-optics representation declares a route-specific integrated phase measure `chi_phi`:
+
+```text
+Phi_I = - chi_phi U_I
+```
+
+for a constant phase screen, or schematically
+
+```text
+Phi_I[C] = - integral_C chi_phi(s) U_I(s) ds.
+```
+
+For constant `alpha_I/kappa_E` under transverse differentiation,
+
+```text
+grad_perp Phi_I
+  = - integral chi_phi alpha_I/kappa_E grad_perp Xi_I ds,
+
+Hessian_perp Phi_I
+  = - integral chi_phi alpha_I/kappa_E Hessian_perp Xi_I ds.
+```
+
+Hence
+
+```text
+uniform Delta Xi_I      -> common phase shift
+grad Delta Xi_I != 0    -> steering
+Hessian Delta Xi_I != 0 -> focusing / defocusing
+```
+
+and the same chain applies to observation-induced `Delta Xi_I`.
+
+For an effective propagation eigenmode `a`, the standard thin-lens target remains
+
+```text
+Phi_a(r) = Phi_a0 - k_a r^2/(2 f_a),
 d^2 Phi_a/dr^2 = -k_a/f_a.
 ```
 
-The project therefore distinguishes:
+A scalar potential `U_I(x) I_3` can therefore alter the common spatial wavefront while still leaving internal flavour probabilities unchanged. Flavour-selective optics requires mode-dependent/traceless matrix structure in addition to spatial phase curvature.
 
-```text
-phase steering:   grad_perp Phi != 0
-phase focusing:   Hessian_perp Phi != 0
-```
-
-A flavour-selective optical element requires mode-dependent phase curvature. Demonstrating a programmed `Gamma_Q(r)` in software is not equivalent to demonstrating a physical neutrino lens.
+See `docs/INFORMATIONAL_PHASE_OPTICS.md`.
 
 ## 7. Effective geometry vs spacetime geometry
 
@@ -251,4 +301,4 @@ Every implementation must preserve the following controls:
 3. `V_Q` must be Hermitian before unitary propagation is claimed.
 4. Closed holonomy must be invariant under local global rephasing of each sampled state.
 5. A focusing claim requires spatially resolved output and a pre-registered null/control condition.
-6. Physical promotion requires hardware data; CPU/GPU execution is not evidence of physical neutrino coupling.
+6. Computational realization is admissible evidence for the substrate-independent informational-potential functional when the typed relational state and invariants are preserved; it does not by itself identify an otherwise-unbound physical neutrino/QHTRI carrier map.
