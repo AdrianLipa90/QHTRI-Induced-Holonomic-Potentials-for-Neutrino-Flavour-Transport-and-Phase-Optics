@@ -39,12 +39,14 @@ A_i(t), phi_i(t), omega_i(t),
 C_ij(tau), S_ij(omega), Gamma_Q(t).
 ```
 
-Fit or derive candidate maps `F_a` only on training/calibration runs; evaluate them on held-out runs.
+The SU(3) coefficient functional `F_a` is algebraically fixed after a typed `Pi_{36->nu}` pullback. Derive/calibrate the pullback itself only on training/calibration runs and evaluate it on held-out runs.
 
 - [x] Retype NASER oscillator drive, phase slope, curvature and phase-imprint proxy into measurable variables.
 - [x] Add deterministic oscillator-coherence feature extraction.
 - [x] Quarantine glyph/symbolic variables from the physical core.
-- [ ] Derive or fit a candidate `F_a` map without target leakage.
+- [x] Implement canonical `u(3)` / SU(3) coefficient extraction after an explicit 36D->flavour pullback.
+- [x] Implement isometric `W: C^3 -> C^36` reference pullback with Hermiticity and basis-covariance gates.
+- [ ] Derive or calibrate the physical/provenance `Pi_{36->nu}` (or `W`) without target leakage.
 
 ## P3 — Physical coupling test HνQ
 

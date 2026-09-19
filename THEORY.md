@@ -96,21 +96,63 @@ path ordering becomes physically relevant within the model and the transport can
 
 ## 5. QHTRI-to-potential bridge
 
-The research question is to derive, rather than assume, a map
+The algebraic coefficient extraction is fixed once an explicit typed pullback from the 36D QHTRI carrier to the three-flavour carrier is supplied.
+
+Let
 
 ```text
-Q(x,t) -> xi_a(x,t),
+H_Q in Herm(36)
 ```
 
-where `Q` contains measurable oscillator observables such as amplitudes, phases, cross-correlations, spectra, and closed-path holonomy.
-
-A generic placeholder is
+and let `W: C^3 -> C^36` be an isometric embedding satisfying
 
 ```text
-xi_a = F_a(C_ij, S_ij(omega), Delta phi_ij, Gamma_Q, ...).
+W^dagger W = I_3.
 ```
 
-The functions `F_a` are not fixed by standard physics. They are the central object to constrain or falsify experimentally.
+Define
+
+```text
+Pi_W(H_Q) = W^dagger H_Q W.
+```
+
+The result is Hermitian and transforms covariantly under a flavour basis rotation `W -> W U`:
+
+```text
+Pi_(W U)(H_Q) = U^dagger Pi_W(H_Q) U.
+```
+
+Using Gell-Mann normalization `Tr(lambda_a lambda_b)=2 delta_ab`,
+
+```text
+Pi_W(H_Q) = v0 I_3 + sum_a xi_a lambda_a,
+v0 = Tr(Pi_W)/3,
+xi_a = Tr(lambda_a Pi_W)/2.
+```
+
+Thus the old placeholder `xi_a = F_a(...)` is no longer an algebraic OPEN. The remaining cross-domain OPEN is the physical/provenance derivation of `Pi_{36->nu}`, represented by `W` here or by a more general typed covariant pullback. It must not be fitted to the final target observable.
+
+For the model Euler-Berry closure on a fixed winding branch,
+
+```text
+Gamma_EBI/(2 pi) = D_Lambda + epsilon_nu + m,
+```
+
+differentiation gives
+
+```text
+dGamma_EBI/dx - 2 pi dD_Lambda/dx = 2 pi d epsilon_nu/dx.
+```
+
+For `epsilon_nu^{ij}=Delta m_ij^2 x/(4 pi E)` at fixed energy, this becomes
+
+```text
+dGamma_EBI/dx - 2 pi dD_Lambda/dx = Delta m_ij^2/(2E),
+```
+
+which is the standard mass-sector phase-rate scale. In this repository it is a consistency gate inside the model, not evidence that physical QHTRI-neutrino coupling has been observed.
+
+See `docs/T36_TO_U3_PULLBACK.md`.
 
 ## 6. Phase optics
 

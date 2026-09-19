@@ -29,6 +29,14 @@ from .bridge import (
     oscillator_features,
     phase_slope_curvature,
 )
+from .pullback import (
+    U3Projection,
+    closure_phase_rate,
+    decompose_u3,
+    pi_36_to_u3,
+    project_operator_to_flavour,
+    validate_flavour_embedding,
+)
 
 __all__ = [
     "berry_holonomy",
@@ -50,4 +58,10 @@ __all__ = [
     "oscillating_drive",
     "oscillator_features",
     "phase_slope_curvature",
+    "U3Projection",
+    "closure_phase_rate",
+    "decompose_u3",
+    "pi_36_to_u3",
+    "project_operator_to_flavour",
+    "validate_flavour_embedding",
 ]
