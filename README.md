@@ -9,7 +9,7 @@ The repository separates four evidential levels:
 - **STANDARD** — established neutrino oscillation / matter-potential / geometric-phase mathematics used as a baseline.
 - **DERIVED_IN_MODEL** — consequences of the explicit mathematical model implemented here.
 - **SIMULATED** — numerical results produced by repository code and tests.
-- **PHYSICAL_HYPOTHESIS** — claims that require indepent physical measurement.
+- **PHYSICAL_HYPOTHESIS** — claims that require independent physical measurement.
 
 The central physical hypothesis is **not** treated as established fact:
 
