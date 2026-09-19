@@ -13,7 +13,7 @@ This file is normative for claim status in this repository.
 | HνQ | Physical QHTRI oscillator geometry couples measurably to neutrino phase/flavour transport. | PHYSICAL_HYPOTHESIS | Blinded controlled experiment; independent replication. |
 | Hfocus | HνQ is strong and controllable enough to produce useful flavour-selective focusing. | PHYSICAL_HYPOTHESIS | Spatially resolved reciprocity/focusing experiment. |
 | Hg | QHTRI modifies physical spacetime metric `g_mu_nu`, not only an effective flavour-space Hamiltonian. | STRONG_PHYSICAL_HYPOTHESIS | Independent metric-sensitive measurement excluding effective-medium explanations. |
-| HZPE | The relevant QHTRI oscillator correlations should be interpreted as engineered zero-point-energy/vacum structure. | INTERPRETIVE_PHYSICAL_HYPOTHESIS | Observable predictions distinguishing it from ordinary driven/noisy-field dynamics. |
+| HZPE | The relevant QHTRI oscillator correlations should be interpreted as engineered zero-point-energy/vacuum structure. | INTERPRETIVE_PHYSICAL_HYPOTHESIS | Observable predictions distinguishing it from ordinary driven/noisy-field dynamics. |
 
 ## Working-prior rule
 
