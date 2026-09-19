@@ -119,3 +119,11 @@ Primary parent surfaces:
 - Relational-Field-Closure/closure/lambda0/RF_L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE.md
 
 RF-L3 already preserves the oriented holonomy coordinate tau_R alongside Xi_I. The present interface composes that information-potential lineage with phase optics without identifying the scalar RFC potential with a neutrino Hamiltonian before an explicit carrier coupling is declared.
+
+## 11. Downstream mechanics cross-reference
+
+The potential/phase functional is extended into momentum, lens-Jacobian, standard gravitational-lensing cross-checks and the GREMLIN orbital/EB frontier in:
+
+`docs/PHASE_MECHANICS_GREMLIN_ORBITAL_EB_BRIDGE.md`
+
+That document preserves the firewall between derived phase mechanics and the OPEN physical source binding of an EB-condensate orbital carrier.

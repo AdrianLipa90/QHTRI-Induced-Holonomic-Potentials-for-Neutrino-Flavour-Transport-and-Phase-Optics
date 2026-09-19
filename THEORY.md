@@ -275,7 +275,75 @@ A scalar potential `U_I(x) I_3` can therefore alter the common spatial wavefront
 
 See `docs/INFORMATIONAL_PHASE_OPTICS.md`.
 
-## 7. Effective geometry vs spacetime geometry
+## 7. Phase mechanics and GREMLIN orbital bridge
+
+For a declared carrier action scale `eta_phi`,
+
+```text
+S_I[C]   = - integral_C U_I dt,
+Phi_I[C] = S_I[C] / eta_phi,
+dPhi_I/dt = -U_I/eta_phi.
+```
+
+The Hamilton-Jacobi interface gives
+
+```text
+p_phi = eta_phi grad(Phi_I)
+```
+
+and the informational-potential force coordinate is
+
+```text
+F_I = -grad(U_I)
+    = -(alpha_I/kappa_E) grad(Xi_I).
+```
+
+For a thin phase screen,
+
+```text
+Hess(Phi_I)
+  = -chi_phi (alpha_I/kappa_E) Hess(Xi_I),
+
+F_lens^{-1}
+  = chi_phi alpha_I/(k kappa_E) Hess(Xi_I),
+
+J = I + (L/k) Hess(Phi_I).
+```
+
+A critical/caustic surface satisfies
+
+```text
+det(J) = 0.
+```
+
+The standard weak-field point-mass limit
+
+```text
+|alpha_g| = 4 G M/(b c^2)
+```
+
+is used as a cross-check of the phase-gradient/lens machinery only. It does not establish `U_I -> g_mu_nu`.
+
+GREMLIN already supplies a source-gated role-separated orbital candidate
+
+```text
+omega^2 = (mu_source/r^3) (q_coupling/m_inertial)
+        = mu_source eta_G/r^3.
+```
+
+If a later source gate admits `U_I(r)` into the orbital carrier Lagrangian, the circular branch conditionally becomes
+
+```text
+omega^2
+  = mu_source eta_G/r^3
+    + (1/(m_I r)) dU_I/dr.
+```
+
+The algebra after that Lagrangian assumption is derived; the physical EB-condensate/source binding remains OPEN.
+
+See `docs/PHASE_MECHANICS_GREMLIN_ORBITAL_EB_BRIDGE.md`.
+
+## 8. Effective geometry vs spacetime geometry
 
 An effective matrix-valued transport geometry may be written schematically as
 
@@ -292,7 +360,7 @@ Hg:  QHTRI -> physical spacetime metric perturbation
 
 `HνQ` does not imply `Hg`.
 
-## 8. Falsification invariants
+## 9. Falsification invariants
 
 Every implementation must preserve the following controls:
 

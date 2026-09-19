@@ -67,7 +67,22 @@ This layer treats the RF-L3 information potential as the primary model object, i
 
 Simulation is sufficient to establish these consequences of the admitted informational-potential functional. A separate carrier-binding theorem is required only when identifying the potential with a specific physical neutrino/QHTRI interaction.
 
-## P4 — Physical carrier binding HνQ
+## P4 — Phase mechanics and GREMLIN orbital crosswalk
+
+- [x] Implement `dPhi/dt=-U/eta_phi`.
+- [x] Implement the Hamilton-Jacobi momentum interface `p=eta_phi grad(Phi)`.
+- [x] Implement `F_I=-(alpha_I/kappa_E) grad(Xi_I)`.
+- [x] Implement phase-Hessian -> inverse-focal-tensor mapping.
+- [x] Implement paraxial lens Jacobian and caustic determinant.
+- [x] Add the standard weak-field point-mass gravitational-lensing cross-check.
+- [x] Cross-reference GREMLIN Newton-Einstein-AB, RFC source-density and mass-role gates.
+- [ ] Bind a typed EB-condensate observable set to an RFC relational-state/source map.
+- [ ] Evaluate the conditional orbital law on held-out EB trajectories without fitting to the target orbit.
+- [ ] Compare orbital, optical, spectral and chemical reconstructions of the same admitted potential.
+
+The EB-condensate route is source-gated. The repository does not identify EB-condensate observables with `U_I`, `mu_source` or `g_mu_nu` before a typed source-binding receipt exists.
+
+## P5 — Physical carrier binding HνQ
 
 Minimum design for the stronger carrier-specific claim:
 
@@ -79,7 +94,7 @@ Minimum design for the stronger carrier-specific claim:
 
 The physical-carrier question is separate from the already executable informational-potential dynamics.
 
-## P5 — Carrier-specific phase optics
+## P6 — Carrier-specific phase optics
 
 After a carrier map is supplied:
 
@@ -88,6 +103,6 @@ After a carrier map is supplied:
 3. separate common spatial focusing from flavour-selective focusing;
 4. compare pullback-route and edge-route predictions without fitting them to each other.
 
-## P6 — Metric hypothesis Hg
+## P7 — Metric hypothesis Hg
 
 Do not infer physical spacetime curvature from phase transport alone. Hg requires an independent metric-sensitive binding and a model that excludes ordinary effective-medium or field-theoretic explanations.

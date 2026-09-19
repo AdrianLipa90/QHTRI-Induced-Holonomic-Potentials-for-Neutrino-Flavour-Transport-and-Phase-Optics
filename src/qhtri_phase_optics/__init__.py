@@ -57,6 +57,17 @@ from .informational_optics import (
     phase_screen_from_potential,
     relative_information_nat,
 )
+from .phase_mechanics import (
+    caustic_determinant,
+    canonical_momentum_from_phase_gradient,
+    convergence_and_shear_from_lensing_hessian,
+    informational_force_from_curvature_gradient,
+    inverse_focal_tensor_from_information_hessian,
+    lens_jacobian_from_phase_hessian,
+    phase_hessian_from_information_hessian,
+    phase_rate_from_potential,
+    point_mass_weak_field_deflection,
+)
 
 __all__ = [
     "berry_holonomy",
@@ -98,4 +109,13 @@ __all__ = [
     "phase_screen_from_information_curvature",
     "phase_screen_from_potential",
     "relative_information_nat",
+    "caustic_determinant",
+    "canonical_momentum_from_phase_gradient",
+    "convergence_and_shear_from_lensing_hessian",
+    "informational_force_from_curvature_gradient",
+    "inverse_focal_tensor_from_information_hessian",
+    "lens_jacobian_from_phase_hessian",
+    "phase_hessian_from_information_hessian",
+    "phase_rate_from_potential",
+    "point_mass_weak_field_deflection",
 ]
