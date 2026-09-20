@@ -161,6 +161,29 @@ omega^2 = mu_source eta_G / r^3.
 
 This is the correct GREMLIN parent for orbital composition. It prevents an untyped semantic-mass field from being silently reused as source mass, inertial mass and coupling charge.
 
+### 5.4 EB Hamiltonian source composition
+
+RFC RF-S22 supplies, on its admitted matched-H branch,
+
+```text
+E_G = H_Phi^EB.
+```
+
+GREMLIN v0.8 keeps the source conversion explicit,
+
+```text
+mu_source = C_mu E_Sigma.
+```
+
+When the admitted extensive source is the RF-S22 generator source,
+
+```text
+E_Sigma = E_G = H_Phi^EB,
+mu_source = C_mu H_Phi^EB.
+```
+
+GREMLIN v0.9 implements this composition together with phase winding, Berry/connection holonomy, condensate quantum pressure and the informational radial-gradient term. `C_mu` and all physical realization bindings remain OPEN.
+
 ## 6. Conditional orbital composition with the informational potential
 
 If, and only if, a later source-binding gate admits `U_I(r)` as an actual term in the orbital carrier Lagrangian,
@@ -268,5 +291,9 @@ Agreement between independently constructed routes is a cross-domain consistency
 - GREMLIN `spec/GREMLIN_SEMANTIC_ORBITAL_NEWTON_EINSTEIN_AB_BRIDGE_V0_2.md`
 - GREMLIN `spec/GREMLIN_SEMANTIC_ORBITAL_RFC_SOURCE_DENSITY_V0_4.md`
 - GREMLIN `spec/GREMLIN_SEMANTIC_ORBITAL_MASS_ROLE_FIREWALL_V0_6.md`
+- GREMLIN `spec/GREMLIN_EB_CONDENSATE_ORBITAL_PHASE_BRIDGE_V0_9.md`
+- RFC `formalism/RF_GREMLIN_EB_ORBITAL_PHASE_CROSSWALK_V0_1.md`
+- Resonant-Chemistry `docs/INFORMATIONAL_PHASE_EB_ORBITAL_SPECTROSCOPY_CROSSWALK.md`
+- PhaseNav Telescope `docs/INFORMATIONAL_PHASE_EB_ORBITAL_SPECTRAL_CROSSWALK.md`
 
 The GREMLIN surfaces remain candidate/source-gated and are cross-referenced rather than promoted here.

@@ -341,7 +341,42 @@ omega^2
 
 The algebra after that Lagrangian assumption is derived; the physical EB-condensate/source binding remains OPEN.
 
+RFC RF-S22 additionally supplies the conditional matched-H identity
+
+```text
+E_G = H_Phi^EB.
+```
+
+GREMLIN orbit-source identifiability v0.8 keeps the conversion coefficient explicit,
+
+```text
+mu_source = C_mu E_Sigma.
+```
+
+On the cross-repository branch where the admitted extensive source is the RF-S22 generator source,
+
+```text
+E_Sigma = E_G = H_Phi^EB,
+```
+
+so
+
+```text
+mu_source = C_mu H_Phi^EB
+```
+
+and the circular balance becomes
+
+```text
+omega^2
+ = C_mu H_Phi^EB eta_G/r^3
+ + alpha_I/(m_I r kappa_E) dXi_I/dr.
+```
+
+This composition does not determine `C_mu`, `eta_G`, or the physical EB realization.
+
 See `docs/PHASE_MECHANICS_GREMLIN_ORBITAL_EB_BRIDGE.md`.
+GREMLIN executable authority: `spec/GREMLIN_EB_CONDENSATE_ORBITAL_PHASE_BRIDGE_V0_9.md`.
 
 ## 8. Effective geometry vs spacetime geometry
 
