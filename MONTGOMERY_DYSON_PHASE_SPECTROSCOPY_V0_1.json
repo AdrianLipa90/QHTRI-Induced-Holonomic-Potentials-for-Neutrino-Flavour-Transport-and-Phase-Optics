@@ -2,7 +2,7 @@
   "schema": "MONTGOMERY_DYSON_PHASE_SPECTROSCOPY_V0_1",
   "repository": "AdrianLipa90/QHTRI-Induced-Holonomic-Potentials-for-Neutrino-Flavour-Transport-and-Phase-Optics",
   "domain_role": "PHASE_MICROSCOPE_TRANSITION_GEOMETRY",
-  "status": "CANDIDATE_IMPLEMENTED_LOCAL_REFERENCE_TESTS_PASS",
+  "status": "CORE_FORCED_PREDICTION__PHASE_MICROSCOPE_BINDING_CANDIDATE",
   "base_branch": "main",
   "base_sha": "d8e07571ef8132bfa1069cff27c9cca8b191853a",
   "branch": "candidate/montgomery-dyson-phase-spectroscopy-v0.1-20260926",
@@ -20,5 +20,15 @@
     "promotes_HZPE": false,
     "asserts_prime_driven_optics": false
   },
-  "canon_allowed": false
+  "canon_allowed": false,
+  "forced_prediction_dependency": {
+    "repository": "AdrianLipa90/Infinities",
+    "branch": "formalize/hardy-car-sine-kernel-forced-prediction-v0.1-20260926",
+    "head": "7008a9121d878674a7190d0966faa727f9eacb55",
+    "claim": "INF-270"
+  },
+  "status_split": {
+    "phase_correlation_core": "DERIVED_IN_FRAMEWORK_FORCED_PREDICTION",
+    "phase_microscope_qhtri_binding": "CANDIDATE_NOT_PROMOTED"
+  }
 }
