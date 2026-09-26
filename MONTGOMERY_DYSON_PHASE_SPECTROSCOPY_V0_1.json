@@ -1,0 +1,24 @@
+{
+  "schema": "MONTGOMERY_DYSON_PHASE_SPECTROSCOPY_V0_1",
+  "repository": "AdrianLipa90/QHTRI-Induced-Holonomic-Potentials-for-Neutrino-Flavour-Transport-and-Phase-Optics",
+  "domain_role": "PHASE_MICROSCOPE_TRANSITION_GEOMETRY",
+  "status": "CANDIDATE_IMPLEMENTED_LOCAL_REFERENCE_TESTS_PASS",
+  "base_branch": "main",
+  "base_sha": "d8e07571ef8132bfa1069cff27c9cca8b191853a",
+  "branch": "candidate/montgomery-dyson-phase-spectroscopy-v0.1-20260926",
+  "date": "2026-09-26",
+  "local_reference_tests": {
+    "status": "PASS",
+    "count": 6,
+    "scope": "isolated module-equivalent smoke/regression; not repository CI"
+  },
+  "invariant": "raw spatial phase pixels != automatically a Montgomery-Dyson spectrum",
+  "claim_boundaries": {
+    "promotes_HnuQ": false,
+    "promotes_Hfocus": false,
+    "promotes_Hg": false,
+    "promotes_HZPE": false,
+    "asserts_prime_driven_optics": false
+  },
+  "canon_allowed": false
+}
