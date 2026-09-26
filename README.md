@@ -71,3 +71,6 @@ Ordinary use of this repository is distinct from training model weights. See `AI
 ## Phase microscope / Montgomery–Dyson spectroscopy candidate
 
 The mathematical diagnostic is implemented in src/qhtri_phase_optics/phase_spectroscopy.py and bounded by docs/MONTGOMERY_DYSON_PHASE_SPECTROSCOPY_V0_1.md. Spatial phase-screen geometry remains distinct from an extracted spectral/eigenphase sequence; GUE spacing statistics are never inferred from raw phase pixels by default.
+
+
+Phase-spectroscopy status refinement: the shared sinc-square pair law is DERIVED_IN_FRAMEWORK / FORCED_PREDICTION in the Hardy–CAR sector. A QHTRI/phase-microscope realization of that spectral sector remains CANDIDATE; raw phase-screen geometry alone does not supply the binding.
