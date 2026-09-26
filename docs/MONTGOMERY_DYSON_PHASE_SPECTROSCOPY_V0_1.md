@@ -44,3 +44,27 @@ state/transition source -> phase geometry -> extracted spectral coordinate -> ph
 ## Forced-prediction provenance
 
 The sinc-square pair law is derived upstream from the consecutive Hardy unilateral-shift projector and filled CAR/Slater determinant. Raw spatial phase pixels are still not such a spectral process. A phase-microscope binding requires an explicit spectral/eigenphase extraction and an independent demonstration that it realizes the Hardy–CAR projector sector.
+
+
+## Forced dual form-factor target
+
+The phase-correlation core now carries both members of the same forced Hardy--CAR spectral law:
+
+\[
+g_2(\Delta\Phi)
+=
+1-
+\left[
+\frac{\sin(\Delta\Phi/2)}
+{\Delta\Phi/2}
+\right]^2,
+\qquad
+S(\tau)=\min(|\tau|,1).
+\]
+
+Implementation distinction:
+- \`spectral_form_factor\` remains the backward-compatible raw coherence \(|\langle e^{i\tau\Phi}\rangle|^2\);
+- \`normalized_spectral_form_factor\` returns \(N|\langle e^{i\tau\Phi}\rangle|^2\), the finite pair-power normalization;
+- \`forced_form_factor_target\` returns the forced ramp/plateau \(\min(|\tau|,1)\).
+
+The core target is DERIVED_IN_FRAMEWORK / FORCED_PREDICTION. Whether the phase-microscope / QHTRI extracted spectrum instantiates the shared consecutive-projector/CAR sector remains a separate domain-binding test.
