@@ -405,3 +405,18 @@ Every implementation must preserve the following controls:
 4. Closed holonomy must be invariant under local global rephasing of each sampled state.
 5. A focusing claim requires spatially resolved output and a pre-registered null/control condition.
 6. Computational realization is admissible evidence for the substrate-independent informational-potential functional when the typed relational state and invariants are preserved; it does not by itself identify an otherwise-unbound physical neutrino/QHTRI carrier map.
+
+
+## 10. Montgomery–Dyson phase-spectroscopy diagnostic
+
+This repository now carries a candidate phase-spectroscopy diagnostic that is deliberately downstream of the existing phase-optics equations. For a separately declared spectral/eigenphase coordinate set with unfolding u_j,
+
+Phi_j = 2 pi u_j,
+
+and the GUE reference correlation is
+
+R_2(Delta Phi) = 1 - [sin(Delta Phi/2)/(Delta Phi/2)]^2.
+
+The arithmetic reference probe uses omega_(p,m)=m log p and weight log(p)/p^(m/2), with phase scrambling as a reverse control.
+
+A spatial phase screen Phi(r) is not, by itself, an unfolded spectral sequence. The existing grad Phi, Hess Phi, lens-Jacobian and caustic machinery remains spatial geometry. Montgomery–Dyson spacing statistics require a separately defined spectral/eigenphase extraction step. This candidate therefore does not promote HnuQ, Hfocus, Hg or HZPE and does not assert prime-driven optics.
