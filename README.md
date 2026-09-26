@@ -68,7 +68,7 @@ Foundation v0.1. The code establishes mathematical invariants and a simulation s
 Ordinary use of this repository is distinct from training model weights. See `AI_TRAINING_POLICY.md`.
 
 
-## Phase microscope / Montgomery–Dyson spectroscopy candidate
+## Phase microscope / Montgomery–Dyson spectroscopy — forced core / candidate physical binding
 
 The mathematical diagnostic is implemented in src/qhtri_phase_optics/phase_spectroscopy.py and bounded by docs/MONTGOMERY_DYSON_PHASE_SPECTROSCOPY_V0_1.md. Spatial phase-screen geometry remains distinct from an extracted spectral/eigenphase sequence; GUE spacing statistics are never inferred from raw phase pixels by default.
 
