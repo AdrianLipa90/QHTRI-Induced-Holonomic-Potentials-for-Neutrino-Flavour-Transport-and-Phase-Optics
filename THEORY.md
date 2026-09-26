@@ -420,3 +420,8 @@ R_2(Delta Phi) = 1 - [sin(Delta Phi/2)/(Delta Phi/2)]^2.
 The arithmetic reference probe uses omega_(p,m)=m log p and weight log(p)/p^(m/2), with phase scrambling as a reverse control.
 
 A spatial phase screen Phi(r) is not, by itself, an unfolded spectral sequence. The existing grad Phi, Hess Phi, lens-Jacobian and caustic machinery remains spatial geometry. Montgomery–Dyson spacing statistics require a separately defined spectral/eigenphase extraction step. This candidate therefore does not promote HnuQ, Hfocus, Hg or HZPE and does not assert prime-driven optics.
+
+
+### 10.1 Forced core versus physical binding
+
+The sinc-square two-point law used by the phase-spectroscopy diagnostic is DERIVED_IN_FRAMEWORK / FORCED_PREDICTION in the imported Hardy–CAR sector. The physical/QHTRI statement is different: neither a spatial phase screen nor a neutrino/optical output is automatically a consecutive-mode Hardy–CAR spectral process. That domain binding remains CANDIDATE and does not promote HnuQ, Hfocus, Hg or HZPE.
