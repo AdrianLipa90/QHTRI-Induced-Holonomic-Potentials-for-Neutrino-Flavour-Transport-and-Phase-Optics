@@ -1,6 +1,10 @@
 # Montgomery–Dyson Phase Spectroscopy v0.1 — Phase Microscope / QHTRI Phase Optics
 
-Status: CANDIDATE / IMPLEMENTED mathematical diagnostic.
+Status split:
+- phase-correlation core: DERIVED_IN_FRAMEWORK / FORCED_PREDICTION;
+- phase-microscope / QHTRI physical binding: CANDIDATE / NOT PROMOTED.
+
+Dependency theorem: AdrianLipa90/Infinities, branch formalize/hardy-car-sine-kernel-forced-prediction-v0.1-20260926, head 7008a9121d878674a7190d0966faa727f9eacb55.
 
 The phase-optics repository owns transition and wavefront geometry. This integration deliberately separates two objects:
 
@@ -35,3 +39,8 @@ with a phase-scramble reverse control that preserves omega and w.
 
 This is the phase-microscope adapter in the shared chain:
 state/transition source -> phase geometry -> extracted spectral coordinate -> phase statistics -> null/reverse controls.
+
+
+## Forced-prediction provenance
+
+The sinc-square pair law is derived upstream from the consecutive Hardy unilateral-shift projector and filled CAR/Slater determinant. Raw spatial phase pixels are still not such a spectral process. A phase-microscope binding requires an explicit spectral/eigenphase extraction and an independent demonstration that it realizes the Hardy–CAR projector sector.
