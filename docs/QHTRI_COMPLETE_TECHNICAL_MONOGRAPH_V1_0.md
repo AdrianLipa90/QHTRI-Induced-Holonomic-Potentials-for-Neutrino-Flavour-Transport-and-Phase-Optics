@@ -3,7 +3,7 @@
 
 **Author:** Adrian Lipa  
 **Repository:** \`AdrianLipa90/QHTRI-Induced-Holonomic-Potentials-for-Neutrino-Flavour-Transport-and-Phase-Optics\`  
-**Audited baseline:** \`main@d8e07571ef8132bfa1069cff27c9cca8b191853a\`  
+**Audited executable baseline:** \`main@d764cb652e13ff4d91c18806eeb171c37591ccdf\`  
 **Audited tree:** \`d764cb652e13ff4d91c18806eeb171c37591ccdf\`  
 **Branch consolidation state:** all non-main branch payloads already contained in \`main\`  
 **Independent local byte-exact replay:** 24/24 source/test blobs matched GitHub SHA  
