@@ -1,0 +1,14 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Bind the existing QHTRI operator trajectory to a typed PNAML readout.
+OP PNAML10.QHTRI.STATE SOURCE existing_qhtri_36d_operator_state
+OP PNAML10.QHTRI.POTENTIAL SOURCE existing_qhtri_torsion_potential_and_holonomy
+OP PNAML10.QHTRI.TIME.ORDER ORDER H_k H_k_plus_1
+OP PNAML10.QHTRI.CONTROL TRANSFORM PNAML10.QHTRI.STATE exact_one_step_inverse_dynamics_control
+OP PNAML10.QHTRI.HAMILTONIAN TRANSFORM PNAML10.QHTRI.CONTROL qhtri_v3_graph_hamiltonian
+OP PNAML10.QHTRI.EVOLUTION COMPOSITION PNAML10.QHTRI.TIME.ORDER PNAML10.QHTRI.HAMILTONIAN PNAML10.QHTRI.POTENTIAL
+ASSERT PNAML10.QHTRI.STATE
+EMIT PNAML10.QHTRI.EVOLUTION
+# CONTRACT Existing QHTRI equations and time ordering unchanged.
+# CONTRACT Software phase transport is not automatic physical quantum hardware execution.
